@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+
+        <% for(var i=0; i<daten.length; i++) { %>
+            
+            <p>
+               <span><%=daten[i].Name%> - <%=daten[i].Interval%> <%=daten[i].TypeInterval%></span> 
+               <input type= "button" id="activbtn-<%=daten[i].ID%>" value = "Activieren"  onclick= "startTimer('<%=daten[i].TypeInterval%>', 
+               <%=daten[i].Interval%>,'<%=daten[i].ID%>' )">
+               <input disabled id="stopbtn-<%=daten[i].ID%>" type="button" value="Deaktivieren" onclick= "stopTimer('<%=daten[i].ID%>')" /> 
+            </p>
+        
+        <% } %>
+        <p><a href="add">Neue MediTimer hinzufuegen.</a></p>
+        
+        <audio id = "beepit" src= "media/best_alarm.mp3"></audio>
+        
+        <script>
+             let myTimeouts = [];
+             
+             function startTimer(typeI, Interval,id) 
+            {
+                startStopBtn(id, true);
+                setupBeep(typeI,Interval,id);
+            }   
+            
+            
+            // timer 
+            let timers = {};
+            function PlaySound(soundObj){
+                document.getElementById('beepit').play();
+            }
+            
+            function beep(id){
+                console.log("bib now")
+                myTimeouts = myTimeouts.filter((timer) => timer.id !== id);
+                startStopBtn(id, false);
+                var snd = new Audio("media/best_alarm.mp3");
+                snd.play();
+            }
+            
+            function setupBeep(intervaltype,interval,id){
+                console.log("satrt interval", interval, intervaltype);
+                let multiplicator = 0;
+                
+                 if (intervaltype == 'sec' ){
+                     multiplicator = 1000;
+                }
+                else if (intervaltype == 'min'){
+                    multiplicator = 1000*60;
+                }
+                else if (intervaltype == 'std'){
+                    multiplicator = 1000*60*60;
+                }
+                else {
+                    multiplicator = 1000*60*60*24;
+                }
+                
+                if(!myTimeouts.find((timer) => timer.id == id)) {
+                    const myTimer = window.setTimeout(()=>beep(id),interval*multiplicator);
+                    myTimeouts.push({id:id, timer:myTimer});
+                }
+                
+                
+            }
+            
+            function timerload() {
+                 const d = new Date();
+                 document.getElementById("timerTarget").innerHTML = d.toLocaleTimeString();
+            }
+
+            
+            function stopTimer(id){
+                let timerObj = myTimeouts.find((timer)=>timer.id == id); // {id, timer}
+                clearTimeout(timerObj.timer);
+                myTimeouts = myTimeouts.filter((timer) => timer.id !== id);
+                startStopBtn(id, false);
+                console.log("I got stopped",myTimeouts);
+            }
+            
+            function startStopBtn(id, isStart=true) {
+                var activbtn = document.getElementById("activbtn-"+id);
+                var stopbtn = document.getElementById("stopbtn-"+id);
+                activbtn.disabled = isStart;
+                stopbtn.disabled = !isStart;
+            }
+        </script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Add</title>
+</head>
+
+<body>
+    <h1>Hinzufuegen</h1>
+   <form action = "add" method = "post">
+       
+     <label for="qrcode">Qrcode</label>
+     <input type="text" name="qrcode" placeholder="qrcode">
+     
+     <label for="medname">Medname</label>
+     <input type="text" name="medname" placeholder="medname">
+     
+     <label for="interval">Interval Zeit</label>
+     <input type="number" name="interval" placeholder="30">
+            
+     <label for="cars">In</label>
+
+    <select name="in" id="cars">
+        <option value="sec">sec</option>
+        <option value="min">min</option>
+        <option value="std">std</option>
+        <option value="tag">tag</option>
+    </select>
+     
+     <button type="reset">Eingabe zurücksetzen</button>
+     <button type="submit">Eingabe absenden</button>
+   </form>
+   <p><a href="home">zurück zu Home</a></p>
+ </body>
+ </html>
