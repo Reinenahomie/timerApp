@@ -11,8 +11,13 @@ app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => service.getregistration(req, res));
+
 app.get('/registration', (req, res) => service.getregistration(req, res));
+app.post('/registration', (req,res) => service.postregistration(req,res));
+
 app.get('/login', (req, res) => service.getlogin(req, res));
+app.post('/login',(req,res)=> service.postlogin(req, res));
+
 app.get('/home', (req, res) => service.gethome(req, res));
 
 app.get('/add', (req, res) => service.getadd(req, res));

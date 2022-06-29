@@ -38,7 +38,7 @@
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
       </div>
       <!-- end loader -->
-      <!-- header -->
+      <!-- header --><
       <header>
          <!-- header inner -->
          <div class="header">
@@ -83,16 +83,26 @@
       <!-- banner -->
       <section class="banner_main">
          <div class="container">
-         <div class="row d_flex">
-            <div class="col-md-6">
-               <div class="text-bg">
-                  <img class= "text-bgimgTime" src="/images/timebild.png" alt="timeLogo" /><br>
-                 
-                  
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7 d_flex justify-content-center" style="padding-top: 6rem;">
+                  <div class="logo">
+                     <a href="index.html"><img src="icon/images/MediTime_logo.png" alt="mediLogo" style="max-width: 80%"></a>
+                  </div>
                </div>
-               <div> <p>Medikamente nie wieder vergessen!</p></div>
             </div>
-            
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7">
+                  <div style="min-width: 100%;">
+                     <img class= "text-bgimgTime" src="images/timebild.png" alt="timeLogo" style="min-width: 100%; height: 100%"/><br>
+                  </div>
+                  <div style="margin-top: 6rem">
+                     <p>Medikamente nie wieder vergessen!</p>
+                  </div>
+                  <div style="margin-top: 10rem;">
+                     <a href="#" class="btn btn-info medi-btn">Get Startet</a>
+                  </div>
+               </div>
+            </div>
          </div>
       </section>
       <!--try a new page-->
@@ -100,38 +110,259 @@
       
       <section class="banner_main">
          <div class="container">
-         <div class="row d_flex">
-            <div class="col-md-6">
-               <div class="text-bg2">
-                  <h1>Willkommen zu MediTime</h1>
-                  <!--<p>There are many variations of passages of Lorem Ipsum available, but the majorityomised words which don't look even slightly believable</p>-->
-                  <!--<a class="read_more" href="#">Read More</a>-->
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7 d_flex justify-content-center" style="padding-top: 6rem;">
+                  <div class="logo">
+                     <a href="index.html"><img src="icon/images/MediTime_logo.png" alt="mediLogo" style="max-width: 80%"></a>
+                  </div>
                </div>
             </div>
-            <div class="col-md-6">
-               <form id="request" class="main_form">
-                  <div class="row">
-                     <div class="col-md-12 ">
-                        <input class="contactus" placeholder="Name" type="type" name="Name"> 
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-6">
+                  <div class="text-bg2">
+                     <h1>Willkommen zu MediTime</h1>
+                     <!--<p>There are many variations of passages of Lorem Ipsum available, but the majorityomised words which don't look even slightly believable</p>-->
+                     <!--<a class="read_more" href="#">Read More</a>-->
+                  </div>
+               </div>
+            </div>
+            <!-- Registration Form-->
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7">
+                  <form id="request" class="main_form" method="post">
+                     <div class="form-group">
+                        <input class="form-control medi-form-control" placeholder="Your Name" type="text" name="Name" />
                      </div>
-                     <div class="col-md-12">
-                        <input class="contactus" placeholder=" Email" type="type" name="Email"> 
+                     <div class="form-group">
+                        <input class="form-control medi-form-control" placeholder="name@email.com" type="email" name="Email" />
                      </div>
-                     <div class="col-md-12">
-                         <input class="contactus" placeholder=" passwort" type="password" name="password">                         
+                     <div class="form-group">
+                        <input class="form-control medi-form-control" placeholder="passwort" type="password" name="password" />
                      </div>
-                     <div class="col-md-12">
-                        <input class="contactus" placeholder="passwortwiederholen" type="password" name= "passwordwdh" >
+                     <div class="form-group">
+                        <input class="form-control medi-form-control" placeholder="passwort wiederholen" type="password" name= "passwordwdh" />
                      </div>
-                     <div class="col-sm-12">
-                        <button class="send_btn">Send</button>
+                     <div class="form-group" style="margin-top: 5rem;">
+                        <button class="btn btn-info send_btn" type="button">Neues Konto erstellen</button> <!-- change type to "submit" later-->
+                     </div>
+                  </form>
+                  <p class="login-info">Bereits registriert? <a href="#">Login</a></p>
+               </div>
+            </div>
+            
+         </div>
+      </section>
+      <br />
+      <br />
+      
+      <section class="banner_main">
+         <div class="container">
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7 d_flex justify-content-center" style="padding-top: 6rem;">
+                  <div class="logo">
+                     <a href="index.html"><img src="icon/images/MediTime_logo.png" alt="mediLogo" style="max-width: 80%"></a>
+                  </div>
+               </div>
+            </div>
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-6">
+                  <div class="text-bg2">
+                     <h1>Willkommen zurück</h1>
+                     <!--<p>There are many variations of passages of Lorem Ipsum available, but the majorityomised words which don't look even slightly believable</p>-->
+                     <!--<a class="read_more" href="#">Read More</a>-->
+                  </div>
+                  <div class="text-bg">
+                     <img class= "text-bgimgTime" src="images/login_image.png" alt="loginLogo" style="min-width: 100%; height:100%"/><br>
+                  </div>
+               </div>
+            </div>
+            <!-- Registration Form-->
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7">
+                  <form id="login" class="main_form" method="post">
+                     <div class="form-group">
+                        <input class="form-control medi-form-control" placeholder="name@email.com" type="email" name="Email" />
+                     </div>
+                     <div class="form-group">
+                        <input class="form-control medi-form-control" placeholder="passwort" type="password" name="password" />
+                     </div>
+                     <div class="form-group" style="margin-top: 5rem;">
+                        <button class="btn btn-info send_btn" type="button">Login</button> <!-- change type to "submit" later-->
+                     </div>
+                  </form>
+                  <p class="login-info"><a href="#">Passwort vergessen?</a></p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br />
+      <br />
+      
+      <section class="banner_main">
+         <div class="container">
+            <div class="row d_flex justify-content-center medi-profile-banner">
+               <div class="col-md-7" style="padding-top: 3rem">
+                  <div class="text-bg">
+                     <img class="text-bgimgTime" src="images/profile_icon.png" alt="loginLogo" style="min-width: 8rem;height: 100%;padding-top: 5rem;"><br>
+                  </div>
+                  <div class="text-bg">
+                     <p style="color: #528181; padding: 0px">Reine</p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7" style="padding-top: 5rem">
+                  <p class="medi-info">Medikamente Eingeben</p>
+                  <form id="medi-eingabe" class="medi-eingabe-form" method="post">
+                     <div>
+                        <div class="form-group">
+                           <input class="form-control medi-form-control" placeholder="Medikamentenname" type="text" name="Medikamentenname">
+                        </div>
+                        <div class="form-group">
+                           <input class="form-control medi-form-control" placeholder="Medikament scannen" type="text" name="Mediscan">
+                        </div>
+                        <div class="form-group">
+                           <select class="form-control medi-form-control" placeholder="" name="Erinnerung">
+                              <option selected="">Möchten Sie erinnert werden? Ja / Nein</option>
+                              <option value="yes">Ja</option>
+                              <option value="no">Nein</option>
+                           </select>
+                        </div>
+                     </div>
+                     <button class="btn btn-primary" type="button" form="medi-eingabe">+</button> <!-- change type to "submit" later-->
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br />
+      <br />
+      
+      <section class="banner_main">
+         <div class="container">
+            <div class="row d_flex justify-content-center medi-profile-banner">
+               <div class="col-md-7 d_flex justify-content-center">
+                  <div class="logo">
+                     <a href="index.html"><img src="icon/images/MediTime_logo.png" alt="mediLogo" style="min-width: 13rem"/></a>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7">
+                  <div class="d_flex justify-content-center">
+                     <p class="medi-name-bg d_flex justify-content-center">Ibuprofen</p>
+                  </div>
+                  <form id="medi-eingabe" class="medi-details-form" method="post">
+                     <div>
+                        <div class="form-group">
+                           <input class="form-control medi-form-control" placeholder="Wann wollen Sie erinnert werden?" 
+                              type="text" name="Medikamentenname" />
+                        </div>
+                        <div class="form-group">
+                           <input class="form-control medi-form-control" placeholder="Wann nehmen Sie dieses Medikament ein?" 
+                              type="text" name="Medikamentenname" />
+                        </div>
+                        <div class="form-group">
+                           <select class="form-control medi-form-control" placeholder="" name="Erinnerung">
+                              <option selected>Einheiten</option>
+                              <option value="micro">µg</option> <!-- auf keinen fall sondersymbole in value="" reinschreiben-->
+                              <option value="mg">mg</option>
+                              <option value="mg">g</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <input class="form-control medi-form-control" placeholder="Wie lange nehmen Sie dieses Medikament ein?" 
+                              type="text" name="Medikamentenname" />
+                        </div>
+                        <div class="form-group">
+                           <select class="form-control medi-form-control" placeholder="" name="Erinnerung">
+                              <option selected>In welche art wollen Sie erinnet werden?</option>
+                              <option value="alarm">Wecker</option>
+                              <option value="push-notification">Push Benachrichtigung</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="d_flex justify-content-end">
+                        <button class="btn btn-primary" type="button" form="medi-eingabe">-></button> <!-- change type to "submit" later-->
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br />
+      <br />
+      
+      <section class="banner_main">
+         <div class="container">
+            <div class="row d_flex justify-content-center medi-profile-banner">
+               <div class="col-md-7" style="padding-top: 5rem">
+                  <div class="text-bg">
+                     <img class= "text-bgimgTime" src="images/profile_icon.png" alt="loginLogo" style="min-width: 8rem; height: 100%"/><br>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7" style="padding-top: 1rem">
+                  <div class="medi-card">
+                     <p class="medi-card-title">Ibuprofen</p>
+                     <p class="medi-card-details">Einnahme in 3 std</p>
+                  </div>
+                  <div class="medi-card">
+                     <p class="medi-card-title">Ibuprofen</p>
+                     <p class="medi-card-details">Einnahme in 3 std</p>
+                  </div>
+                  <div class="medi-card">
+                     <p class="medi-card-title">Ibuprofen</p>
+                     <p class="medi-card-details">Einnahme in 3 std</p>
+                  </div>
+                  <div class="medi-card">
+                     <p class="medi-card-title">Ibuprofen</p>
+                     <p class="medi-card-details">Einnahme in 3 std</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br />
+      <br />
+      
+      <section class="banner_main">
+         <div class="container" style="background-color: #90decf">
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7">
+                  <div class="text-bg">
+                     <img class="text-bgimgTime" src="images/woman_sitting_nextt_to_clock.png" 
+                        alt="reminderLogo" style="min-width: 23rem;height: 100%;margin-top: 12rem;"><br>
+                  </div>
+                  <div>
+                     <h1 style="font-size: 2.5rem; font-weight: bold">Ibuprofen jetzt einnehmen?</h1>
+                  </div>
+                  <div class="row d_flex justify-content-between" style="padding:3rem">
+                     <div style="background-color: #00bfa6; border-radius: 50%;max-width: 7rem;height: 7rem;width: 7rem;"
+                        class="col d_flex justify-content-center">
+                        <p style="font-size: 2rem; color: white; font-weight: bold">Ja</p>
+                     </div>
+                     <div style="background-color: #ff6584;border-radius: 50%;max-width: 7rem;height: 7rem;width: 7rem;"
+                        class="col d_flex justify-content-center">
+                        <p style="font-size: 2rem; color: white; font-weight: bold">Nein</p>
                      </div>
                   </div>
-               </form>
+               </div>
             </div>
          </div>
       </section>
       <!-- end banner -->
+      
+      
+      
+      
+      
+      
+      
       <!-- food -->
       <div class="food">
          <div class="container">

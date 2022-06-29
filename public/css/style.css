@@ -52,6 +52,14 @@ body {
      font-weight: normal;
 }
 
+.banner_main {
+     background: #c5fdfd;
+}
+
+.main-layout {
+     background: #420;
+}
+
 a {
      color: #1f1f1f;
      text-decoration: none !important;
@@ -73,7 +81,6 @@ h6 {
      font-weight: normal;
      position: relative;
      padding: 0 0 10px 0;
-     font-weight: normal;
      line-height: normal;
      color: #111111;
      margin: 0
@@ -357,21 +364,91 @@ button {
 }
 
 .text-bg2 h1 {
-         color: black;
-    /* font-size: 50px; */
-    line-height: normal;
-    padding-bottom: 10px;
-    font-weight: bold;
-    font-family:"El messiri";
+     color: black;
+     /* font-size: 50px; */
+     line-height: normal;
+     padding-bottom: 10px;
+     font-weight: bold;
+     font-family:"El messiri";
      position: relative;
-     bottom: 50px;
+}
+
+.medi-profile-banner {
+     height: 20rem;
+     background: #90decf;
+     background-image: url("../images/background_clouds.png");;
+     background-repeat: no-repeat;
+     background-size: 60vh;
+}
+.medi-details-form {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     background-color: #56a898;
+     border-radius: 2rem;
+     min-height: 40rem;
+     padding: 2rem;
+     padding-top: 3rem;
+     box-shadow: 3px 3px 3px 3px #dde4e4;
+}
+
+.medi-eingabe-form {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     background-color: #c7fefe;
+     border-radius: 2rem;
+     min-height: 30rem;
+     padding: 2rem;
+     padding-top: 3rem;
+     margin-top: 2rem;
+     box-shadow: 3px 3px 3px 3px #dde4e4;
+}
+
+.medi-eingabe-form .medi-form-control, .medi-details-form .medi-form-control{
+     background-color: #ffffff;
+}
+
+.medi-eingabe-form .medi-form-control:focus, .medi-details-form .medi-form-control:focus {
+     background-color: #ffffff;
 }
 
 p{
      color: black;
 }
-       
+
+.medi-card {
+     background-color: #90decf;
+     border-radius: 1.5rem;
+     margin-top: 2rem;
 }
+.medi-card .medi-card-title {
+     font-size: 2rem;
+     font-weight: bold;
+     padding-top: 2rem;
+     padding-bottom: 3rem;
+}
+
+.medi-card .medi-card-details {
+     font-size: 1.5rem;
+     font-weight: bold;
+     padding-bottom: 1.5rem;
+}
+
+.medi-name-bg {
+     background-image: url(../images/medikament_bg.png);
+     background-color: white;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 100% 100%;
+     min-height: 8rem;
+     font-weight: bold;
+     padding-top: 2rem;
+     font-size: 1.2rem;
+     max-width: 25rem;
+     width: 100%;
+}
+
 .medtext{
     font-family:"El messiri";
      position: relative;
@@ -385,14 +462,41 @@ p{
      padding: 25px 0px 60px 0px;
 }
 
-.main_form {
-     padding: 60px 50px 80px 50px;
-     background: #6FDFDF;
-     border-radius: 10px;
-     border-top: #17a2b8 solid 15px;
+p .login-info {
+     color: #aaafaf;
+     font-size: 1rem;
 }
 
-.main_form .contactus {
+.login-info a{
+     color: #22c0ca;
+}
+
+.login-info a:hover{
+     color: #1aa7d6;
+}
+
+form .medi-form-control {
+     background: #c5fdfd;
+     border-radius: 50px;
+     border-width: 0;
+     min-height: 4rem;
+     padding-left: 4rem;
+}
+
+form .medi-form-control:focus {
+     background: #c5fdfd;
+}
+
+.medi-form-control::placeholder {
+     color: #7ea2a2;
+     opacity: 1;
+}
+
+.main_form {
+     padding: 60px 50px 80px 50px;
+}
+
+.main_form .registration {
      border: inherit;
      margin-bottom: 70px;
      width: 100%;
@@ -420,31 +524,46 @@ p{
 
 .main_form .send_btn {
      font-size: 17px;
-     transition: ease-in all 0.5s;
-     background-color: #000;
-     color: #fff;
+     background-color: #4be0ea;
+     color: #000;
      padding: 13px 0px;
      margin: 0 auto;
-     max-width: 200px;
      width: 100%;
      display: block;
      font-weight: 500;
      text-transform: uppercase;
-     border-radius: 35px;
+     border-radius: 15px;
 }
 
 .main_form .send_btn:hover {
      background-color: #eda911;
-     transition: ease-in all 0.5s;
      color: #000;
 }
 
-#request *::placeholder {
-     color: #fbfaf8;
-     opacity: 1;
+.medi-btn {
+     font-size: 17px;
+     background-color: #4be0ea;
+     color: #000;
+     padding: 13px 0px;
+     margin: 0 auto;
+     width: 100%;
+     display: block;
+     font-weight: 500;
+     text-transform: uppercase;
+     border-radius: 15px;
 }
 
+.medi-btn:hover {
+     background-color: #eda911;
+     color: #000;
+}
 
+.banner_main .container {
+     background-image: url("../images/background_clouds.png");
+     background-repeat: no-repeat;
+     min-height: 100vh;
+     background-size: 60vh;
+}
 /** end banner section **/
 
 .titlepage {

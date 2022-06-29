@@ -9,7 +9,7 @@
             <p>
                <span><%=daten[i].Name%> - <%=daten[i].Interval%> <%=daten[i].TypeInterval%></span> 
                <input type= "button" id="activbtn-<%=daten[i].ID%>" value = "Activieren"  onclick= "startTimer('<%=daten[i].TypeInterval%>', 
-               <%=daten[i].Interval%>,'<%=daten[i].ID%>' )">
+                   <%=daten[i].Interval%>,'<%=daten[i].ID%>' )">
                <input disabled id="stopbtn-<%=daten[i].ID%>" type="button" value="Deaktivieren" onclick= "stopTimer('<%=daten[i].ID%>')" /> 
             </p>
         
