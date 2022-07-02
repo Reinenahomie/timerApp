@@ -1,22 +1,66 @@
 <html>
     <head>
         <title>Home</title>
+      
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/medicon.png"/>
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    
     </head>
     <body>
-
-        <% for(var i=0; i<daten.length; i++) { %>
-            
-            <p>
-               <span><%=daten[i].Name%> - <%=daten[i].Interval%> <%=daten[i].TypeInterval%></span> 
-               <input type= "button" id="activbtn-<%=daten[i].ID%>" value = "Activieren"  onclick= "startTimer('<%=daten[i].TypeInterval%>', 
-                   <%=daten[i].Interval%>,'<%=daten[i].ID%>' )">
-               <input disabled id="stopbtn-<%=daten[i].ID%>" type="button" value="Deaktivieren" onclick= "stopTimer('<%=daten[i].ID%>')" /> 
-            </p>
-        
-        <% } %>
-        <p><a href="add">Neue MediTimer hinzufuegen.</a></p>
-        
         <audio id = "beepit" src= "media/best_alarm.mp3"></audio>
+         <section class="banner_main">
+         <div class="container">
+            <div class="row d_flex justify-content-center medi-profile-banner">
+               <div class="col-md-7" style="padding-top: 5rem">
+                   <h1>Willkommen <%=user.name%></h1>
+                  <div class="text-bg">
+                     <img class= "text-bgimgTime" src="images/avatar bild.png" alt="loginLogo" style="width: 8rem; height: 8rem"/><br>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="row d_flex justify-content-center">
+                
+            <% for(var i=0; i<daten.length; i++) { %>
+               <div class="col-md-7" style="padding-top: 1rem">
+                  <div class="medi-card">
+                     <p class="medi-card-title"><%=daten[i].Name%></p>
+                     <p class="medi-card-details">Einnahme in <%=daten[i].Interval%> <%=daten[i].TypeInterval%></p>
+                     <p><input type= "button" style="background-color: #00bfa6;" class="btn btn-info send_btn m-3" id="activbtn-<%=daten[i].ID%>" value = "Activieren"  onclick= "startTimer('<%=daten[i].TypeInterval%>', 
+                           <%=daten[i].Interval%>,'<%=daten[i].ID%>' )">
+                         </input>
+                        <input class="btn btn-info send_btn m-3" style="background-color: #ff6584;" disabled id="stopbtn-<%=daten[i].ID%>" type="button"      value="Deaktivieren" onclick= "stopTimer('<%=daten[i].ID%>')" />
+                     </p>
+                  </div> 
+               </div>
+             <% } %>
+            </div>
+            <div style="margin-top: 5rem;">
+                 <p class="login-info"><a href="add">Neue MediTimer hinzufuegen.</a></p>
+                 <p class="login-info"><a href="logout">Logout</a></p>
+            </div>
+         </div>
+         
+      </section>
+      <br />
+      <br />
+      
+      
+      
+      <!-- end banner -->
+        
+        
         
         <script>
              let myTimeouts = [];
@@ -85,8 +129,10 @@
                 activbtn.disabled = isStart;
                 stopbtn.disabled = !isStart;
             }
+            
         </script>
         
+
         
     </body>
 </html>

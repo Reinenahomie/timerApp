@@ -2,33 +2,73 @@
 
 <head>
     <title>Add</title>
+     <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/medicon.png"/>
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    
 </head>
 
 <body>
-    <h1>Hinzufuegen</h1>
-   <form action = "add" method = "post">
-       
-     <label for="qrcode">Qrcode</label>
-     <input type="text" name="qrcode" placeholder="qrcode">
-     
-     <label for="medname">Medname</label>
-     <input type="text" name="medname" placeholder="medname">
-     
-     <label for="interval">Interval Zeit</label>
-     <input type="number" name="interval" placeholder="30">
-            
-     <label for="cars">In</label>
 
-    <select name="in" id="cars">
-        <option value="sec">sec</option>
-        <option value="min">min</option>
-        <option value="std">std</option>
-        <option value="tag">tag</option>
-    </select>
-     
-     <button type="reset">Eingabe zurücksetzen</button>
-     <button type="submit">Eingabe absenden</button>
-   </form>
-   <p><a href="home">zurück zu Home</a></p>
+   <section class="banner_main">
+         <div class="container">
+            <div class="row d_flex justify-content-center medi-profile-banner">
+               <div class="col-md-7" style="padding-top: 3rem">
+                  <div class="text-bg">
+                     <img class= "text-bgimgTime" src="images/avatar bild.png" alt="loginLogo" style="width: 8rem; height: 8rem"/><br>
+                  </div>
+                  <div class="text-bg">
+                     <p style="color: #528181; padding: 0px"><%=user.name%></p>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="row d_flex justify-content-center">
+               <div class="col-md-7" style="padding-top: 5rem">
+                  <p class="medi-info">Medikamente Eingeben</p>
+                  <form id="medi-eingabe" class="medi-eingabe-form main_form" action = "add" method = "post">
+                     <div>
+                        <div class="form-group">
+                           <input class="form-control medi-form-control" placeholder="Medikamentenname" type="text" name="medname" >
+                        </div>
+                        <div class="form-group">
+                           <input class="form-control medi-form-control" placeholder="Medikament Qrcode" type="text" name="qrcode">
+                        </div>
+                        <div class="form-group">
+                           <input class="form-control medi-form-control" placeholder="30" type="number" name="interval" >
+                        </div>
+                        <div class="form-group">
+                           <select class="form-control medi-form-control" placeholder="sec" name="in">
+                                <option value="sec">sec</option>
+                                <option value="min">min</option>
+                                <option value="std">std</option>
+                                <option value="tag">tag</option>
+                           </select>
+                        </div>
+                     </div>
+                     <button class="btn btn-primary  send_btn" type="submit" form="medi-eingabe">Add</button> <!-- change type to "submit" later-->
+                     <div class="form-group" style="margin-top: 1rem;">
+                        <button class="btn send_btn send-reset" type="reset">Reset</button> <!-- change type to "submit" later-->
+                        <p class="login-info"><a href="home">zurück zu Home</a></p>
+                        <p class="login-info"><a href="logout">Logout</a></p>
+                     </div>
+                  </form>
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+      <br />
+      <br />
  </body>
  </html>

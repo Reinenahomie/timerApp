@@ -2,13 +2,20 @@ const Express = require("express");
 const Ejs = require("ejs");
 const app = Express();
 const bodyParser = require("body-parser");
-const service = require('./routen/service')
+const cookieSession = require('cookie-session');
+const service = require('./routen/service');
 
 var sha1 = require("sha1");
 
 app.use (Express.static('public'));
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieSession({
+  name: 'session',
+  keys: ['hrw','medtime'],
+  // Cookie Options
+  maxAge: 7*24 * 60 * 60 * 1000 //  7Days
+}));
 
 app.get('/', (req, res) => service.getregistration(req, res));
 
@@ -24,6 +31,7 @@ app.get('/add', (req, res) => service.getadd(req, res));
 app.post('/add', (req, res) => service.postadd(req, res));
 
 app.get ('/initDB', (req, res) => service.initDB(req, res));
+app.get('/logout', (req, res) => service.getlogout(req, res));
 
 
 

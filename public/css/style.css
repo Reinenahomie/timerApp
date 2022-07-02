@@ -535,6 +535,10 @@ form .medi-form-control:focus {
      border-radius: 15px;
 }
 
+.main_form .send_btn.send-reset {
+     background-color: #dc35458a;
+}
+
 .main_form .send_btn:hover {
      background-color: #eda911;
      color: #000;
