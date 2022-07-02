@@ -1,4 +1,4 @@
 ##Meditime
 This app help to remind you when you are to take your medications.
 Made by Nahomie Tagne
-`workingId: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`
+`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`
